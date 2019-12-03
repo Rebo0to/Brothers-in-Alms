@@ -1,0 +1,93 @@
+﻿
+.nav {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    top: 0;
+}
+
+.subnav {
+    position: sticky;
+    bottom: 0;
+    top: 60px;
+    z-index: 1000;
+}
+
+
+.hero {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #bbdefb;
+}
+
+    .hero h1 {
+        font-size: 6em;
+        margin: 0 90px;
+        text-align: center;
+    }
+
+.subnav {
+    background: #fff;
+    border-bottom: 1px solid #222;
+}
+
+.subnav__container {
+    align-items: baseline;
+    display: flex;
+    margin: 0 60px;
+    padding: 10px 0;
+}
+
+.subnav__title {
+    font-size: 1.25em;
+}
+
+.subnav__list {
+    margin: 0 15px;
+}
+
+.subnav__item {
+    display: inline-block;
+    margin: 0 8px;
+    padding: 5px;
+}
+
+.section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 90px 30px;
+    background-color: #ffcdd2;
+    text-align: center;
+}
+
+    .section h2 {
+        font-size: 3em;
+        margin-bottom: 15px;
+    }
+
+    .section p {
+        line-height: 1.625em;
+        margin: 0 auto;
+        max-width: 480px;
+    }
+
+footer {
+    text-align: center;
+}
+
+
+.parallax {
+    /* The image used */
+    background-image: url("/images/image_3.jpg");
+    /* Set a specific height */
+    height: 400px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

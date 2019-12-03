@@ -1,0 +1,122 @@
+﻿@model IEnumerable<CharityProject.Entities.DomainClasses.Donation>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Donations</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Partner.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plan.Category)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Partner.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Plan.Category)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.DonationId })
+                @Html.ActionLink("Details", "Details", new { id = item.DonationId })
+                @Html.ActionLink("Delete", "Delete", new { id = item.DonationId })
+
+                <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="WFYREW3Z7D5N2" />
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                    <img alt="" border="0" src="https://www.sandbox.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
+                </form>
+
+
+                <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="CY4PSKZDPN6QA">
+                    <table>
+                        <tr><td><input type="hidden" name="on0" value=""></td></tr>
+                        <tr>
+                            <td>
+                                <select name="os0">
+                                    <option value="20 euro">€20.00 EUR - monthly</option>
+                                    <option value="30 euro">€30.00 EUR - monthly</option>
+                                    <option value="50 euro">€50.00 EUR - monthly</option>
+                                    <option value="75 euro">€75.00 EUR - monthly</option>
+                                    <option value="100 euro">€100.00 EUR - monthly</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="hidden" name="currency_code" value="EUR">
+                    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.sandbox.paypal.com/el_GR/i/scr/pixel.gif" width="1" height="1">
+                </form>
+            </td>
+        </tr>
+    }
+
+</table>*@
+
+@foreach (var item in Model)
+{
+    <div class="col-sm-4">
+        <div class="thumbnail">
+
+            <p><strong> @item.Title </strong></p>
+            <p> Description: @item.Description </p>
+            <p> Plan: @item.Plan.Category </p>
+            <p> Organization: @item.Partner.Name </p>
+            <p> Country: @item.Partner.Country </p>
+            <div>
+                @Html.ActionLink("Edit", "Edit", new { id = item.DonationId }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Details", "Details", new { id = item.DonationId }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.DonationId }, new { @class = "btn btn-danger" })
+                <br />
+
+                <div class="paypalbuttons">
+                    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick" />
+                        <input type="hidden" name="hosted_button_id" value="6EE8TMT9GX58A" />
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
+                    </form>
+                 </div>
+             </div>
+        </div>
+    </div>
+
+
+}

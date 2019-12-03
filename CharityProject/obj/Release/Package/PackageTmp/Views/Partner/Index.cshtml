@@ -1,0 +1,49 @@
+﻿@model IEnumerable<CharityProject.Entities.DomainClasses.Partner>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Partners</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Title: @Html.TextBox("searchPartner", null, new { placeholder = "Search by Name..." })
+        <input type="submit" value="Search" id="searchActorButton" class="btn btn-warning" />
+    </p>
+}
+
+@foreach (var item in Model)
+{
+    <div class="col-sm-4">
+        <div class="thumbnail">
+            <img src=@item.ImageUrl alt="/">
+            <p><strong> @item.Name </strong></p>
+            <p> Country: @item.Country </p>
+            <p> Address: @item.Address </p>
+            <p>
+               <p> Donations: </p>
+                @Html.DropDownListFor(modelItem => item.Donations, new SelectList(item.Donations, "DonationId", "Title"), null,
+                 new { @class = "dropdown-menu-right", style = "width:220px;" })
+            </p>
+            <p>
+            <p>Subscriptions:</p>
+                @Html.DropDownListFor(modelItem => item.Subscriptions, new SelectList(item.Subscriptions, "Id", "Title"), null,
+                 new { @class = "dropdown-menu-right", style = "width:220px;" })
+            </p>
+
+            <div>
+                @Html.ActionLink("Edit", "Edit", new { id = item.PartnerId }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Details", "Details", new { id = item.PartnerId }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.PartnerId }, new { @class = "btn btn-danger" })
+            </div>
+        </div>
+    </div>
+
+
+}

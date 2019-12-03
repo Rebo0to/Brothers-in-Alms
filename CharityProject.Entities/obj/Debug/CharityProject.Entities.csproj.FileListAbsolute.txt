@@ -1,0 +1,10 @@
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Entities\bin\Debug\CharityProject.Entities.dll
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Entities\bin\Debug\CharityProject.Entities.pdb
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Entities\obj\Debug\CharityProject.Entities.dll
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Entities\obj\Debug\CharityProject.Entities.pdb
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Entities\obj\Debug\CharityProject.Entities.csprojAssemblyReference.cache
+C:\Users\Schaffer\Desktop\CharityProject\CharityProject.Entities\bin\Debug\CharityProject.Entities.dll
+C:\Users\Schaffer\Desktop\CharityProject\CharityProject.Entities\bin\Debug\CharityProject.Entities.pdb
+C:\Users\Schaffer\Desktop\CharityProject\CharityProject.Entities\obj\Debug\CharityProject.Entities.csprojAssemblyReference.cache
+C:\Users\Schaffer\Desktop\CharityProject\CharityProject.Entities\obj\Debug\CharityProject.Entities.dll
+C:\Users\Schaffer\Desktop\CharityProject\CharityProject.Entities\obj\Debug\CharityProject.Entities.pdb

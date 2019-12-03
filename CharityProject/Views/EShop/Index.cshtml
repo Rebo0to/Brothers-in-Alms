@@ -1,0 +1,168 @@
+﻿@model CharityProject.Entities.CartEntities.ProductVm
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <link href="~/css/products.css" rel="stylesheet" />
+
+
+<div class="hero-wrap" style="background-image: url('/images/merch.jpg');" data-stellar-background-ratio="0.5">
+
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </span> <span>Merchandise</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"></h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section style="height:80px; margin-top:35px; background-color:rgba(231, 227, 227, 0.30)">
+
+
+
+    @Html.ActionLink("Go to Cart", "Cart", "EShop", 
+    new { @class = "btn btn-info", @style = " padding:15px; margin-top:3px; width: 40%; margin-left: 30%; margin-right: 30%" })
+    <br />
+   
+</section>
+
+
+
+<section class="ftco-section" style="background-color:rgba(231, 227, 227, 0.30)">
+    <div class="container" style="margin-bottom:10px">
+        @using (Html.BeginForm("Index", "EShop", FormMethod.Get))
+        {
+
+            @Html.DropDownList("NumberOfItems", new SelectList(ViewBag.NumberOfItems), "All",
+                new { style = "padding:9px; width:190px; margin-left:10px; border-radius:3px" }) ;
+
+            <input type="submit" name="NumberOfItems" value="Search" class="btn btn-primary subnav__item" />
+        }
+    </div>
+    <div class="container">
+
+        <div class="row d-flex">
+
+           
+            @foreach (var item in Model.Products)
+            {
+
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="productCardContainer">
+                        <div class="productCardContent">
+                            <div class="productCardImage">
+                                
+                                <img src="@item.ImageUrl" alt="" />
+
+                            </div>
+                            <div class="productCardDetails">
+                                <div class="productCardModel">
+                                    <span class="modelCardEffect"></span>
+                                    <a href="">
+                                        @item.Name
+                                        <span>Price: @((item.Price / 1M).ToString("0.00")) EUR</span>
+                                    </a>
+                                </div>
+                                <div class="productCardDetailsList">
+                                    <div class="list-group">
+                                        <a href="" class="list-group-item">
+                                            <span class="detailIcon">
+                                                <i class="fa fa-dot-circle-o"></i>
+                                            </span>
+                                            <span class="detailInfo">
+                                                Size: @item.Size
+                                            </span>
+                                        </a>
+                                        <p class="detailInfo" style="text-align:center"> Buy a t-shirt and help our Cause </p>
+                                    </div>
+                                </div>
+                                <div class="productCardPrice">
+
+                                    @using (Html.BeginForm("Add", "EShop", FormMethod.Post))
+                                    {
+                                        @Html.Hidden("ProductId", item.Id)
+                                        <button type="submit" class="btn btn-warning">Add to cart</button>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                @*<div class="col-md-4 d-flex ftco-animate">
+                        <div class="blog-entry align-self-stretch">
+                            <a href="blog-single.html" class="block-20" style="background-image: url('/images/bg_2.jpg');">
+                            </a>
+                            <div class="text p-4 d-block">
+
+
+                                <h3 class="heading mt-3">@item.Name</h3>
+
+                                <div class="meta mb-3">
+
+                                    <div>Size: @item.Size</div>
+                                    <div>Price: @((item.Price / 100M).ToString("0.00"))  €</div>
+                                </div>
+
+
+                                @using (Html.BeginForm("Add", "EShop", FormMethod.Post))
+                                {
+                                    @Html.Hidden("ProductId", item.Id)
+                                    <button type="submit" class="btn btn-warning">Add to cart</button>
+                                }
+
+                                @if (User.IsInRole("admin"))
+                                {
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                                    @Html.ActionLink("Details", "Details", new { id = item.Id })
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                                }
+
+
+
+                            </div>
+                        </div>
+                    </div>*@
+
+
+            }
+
+
+
+
+        </div>
+    </div>
+
+</section>
+

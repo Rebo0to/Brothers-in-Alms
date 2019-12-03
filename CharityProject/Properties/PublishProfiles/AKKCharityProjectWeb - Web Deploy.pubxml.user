@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4DnhWqx9fEaT3vJ6tIksPgAAAAACAAAAAAAQZgAAAAEAACAAAAC6Ux7LDJDf0B9TLCJ7wWUyxQrqtzM6PuCI3kvTE1XM2QAAAAAOgAAAAAIAACAAAAAGgjIarnvzog04NgJ5kkHI+imAN7jZ3C7m2mpSF7tMT4AAAADqdIjCfa/Bfn+NpgdpYw2ejQllK3fNSVXv51AfwcyhvloT/jaZQ+D3rKbt70gfx+77Sala3P0svsh+hkauQe0p0GuyEzA+ofgslUoqa95AO43OzjNGMUeESi61UyDH/6RQkaEIyWtDAMUwwJp8ugVJfduZlL7UePU2yjWxAe5Qz0AAAABECCPummO9IaCY5vxSXz/SPp+cF62hqV1tClm/41g6VV+hnqTZjiv12zTtKUQTDMcb6W0I5YNTogqAxEeLgZ3O</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <AzureDBConnectionStrings Include="Data Source=tcp:akkcharityprojectwebdbserver.database.windows.net,1433;Initial Catalog=CharityDataBase;User Id=Adminn@akkcharityprojectwebdbserver;Password=Asdasd123" />
+    <AzureDBConnectionStrings Include="Data Source=tcp:akkcharityprojectwebdbserver.database.windows.net,1433;Initial Catalog=CharityDataBase_AUTH;User Id=Adminn@akkcharityprojectwebdbserver;Password=Asdasd123" />
+  </ItemGroup>
+</Project>

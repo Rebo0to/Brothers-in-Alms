@@ -1,0 +1,13 @@
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Database\bin\Release\CharityProject.Database.dll.config
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Database\bin\Release\CharityProject.Database.dll
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Database\bin\Release\CharityProject.Database.pdb
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Database\bin\Release\CharityProject.Entities.dll
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Database\bin\Release\EntityFramework.dll
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Database\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Database\bin\Release\CharityProject.Entities.pdb
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Database\bin\Release\EntityFramework.xml
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Database\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Database\obj\Release\CharityProject.Database.csprojAssemblyReference.cache
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Database\obj\Release\CharityProject.Database.csproj.CopyComplete
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Database\obj\Release\CharityProject.Database.dll
+C:\Users\Babis\Desktop\CharityProject\CharityProject.Database\obj\Release\CharityProject.Database.pdb

@@ -1,0 +1,57 @@
+﻿.jumbotron {
+    position: relative;
+    overflow: hidden;
+}
+
+    .jumbotron .container {
+        position: relative;
+        z-index: 2;
+        background: rgba(0,0,0,0.2);
+        padding: 2rem;
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 3px;
+        height: 400px;
+    }
+
+.jumbotron-background {
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+img.blur {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+}
+
+
+.parallax {
+    /* The image used */
+    background-image: url("/images/unicef.jpg");
+    /* Set a specific height */
+    height: 450px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.parallaxpartners {
+    /* The image used */
+    background-image: url("/images/reema.jpg");
+    /* Set a specific height */
+    height: 450px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
